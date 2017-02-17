@@ -1,7 +1,7 @@
 Summary: Share mouse and keyboard between multiple computers over the network
 Name: synergy
-Version: 1.7.6
-Release: 2%{?dist}
+Version: 1.8.7
+Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Daemons
 URL: http://synergy-foss.org/
@@ -21,6 +21,7 @@ BuildRequires: libcurl-devel
 BuildRequires: desktop-file-utils
 BuildRequires: avahi-compat-libdns_sd-devel
 BuildRequires: openssl-devel
+BuildRequires: gtest-devel
 
 %description
 Synergy lets you easily share your mouse and keyboard between multiple
@@ -80,6 +81,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/synergy.desktop
 %{_mandir}/man8/synergys.8*
 
 %changelog
+* Fri Feb 17 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 1.8.7-1
+- update to 1.8.7
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.7.6-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
