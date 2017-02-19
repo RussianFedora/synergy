@@ -1,7 +1,11 @@
 Summary: Share mouse and keyboard between multiple computers over the network
 Name: synergy
 Version: 1.8.7
-Release: 1%{?dist}
+%if 0%{?fedora} >= 25
+Release:        1%{?dist}.R
+%else
+Release:        1%{?dist}
+%endif
 License: GPLv2
 Group: System Environment/Daemons
 URL: http://synergy-foss.org/
@@ -81,7 +85,7 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/synergy.desktop
 %{_mandir}/man8/synergys.8*
 
 %changelog
-* Fri Feb 17 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 1.8.7-1
+* Fri Feb 17 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 1.8.7-1.R
 - update to 1.8.7
 
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.7.6-2
